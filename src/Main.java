@@ -36,32 +36,33 @@ public class Main {
         System.out.print("Минимальное количество вхождений: ");
         for (Map.Entry<Character, Integer> symbol : symbols.entrySet()) {
             if (Objects.equals(symbol.getValue(), min)) {
-                System.out.print("[" +symbol.getKey() + " : " + symbol.getValue() + "] ");
+                System.out.print("[" + symbol.getKey() + " : " + symbol.getValue() + "] ");
             }
         }
     }
-        private static Integer getMax(Map < Character, Integer > symbols){
-            int max = Integer.MIN_VALUE;
-            for (Map.Entry<Character, Integer> symbol : symbols.entrySet()) {
-                if (symbol.getValue() > max) {
-                    max = symbol.getValue();
-                }
+
+    private static Integer getMax(Map<Character, Integer> symbols) {
+        int max = Integer.MIN_VALUE;
+        for (Map.Entry<Character, Integer> symbol : symbols.entrySet()) {
+            if (symbol.getValue() > max) {
+                max = symbol.getValue();
             }
-            return max;
         }
-
-        private static Integer getMin (Map < Character, Integer > symbols){
-            int min = Integer.MAX_VALUE;
-
-            for (Map.Entry<Character, Integer> symbol : symbols.entrySet()) {
-                if (min > symbol.getValue()) {
-                    min = symbol.getValue();
-                }
-
-            }
-            return min;
-        }
+        return max;
     }
+
+    private static Integer getMin(Map<Character, Integer> symbols) {
+        int min = Integer.MAX_VALUE;
+
+        for (Map.Entry<Character, Integer> symbol : symbols.entrySet()) {
+            if (min > symbol.getValue()) {
+                min = symbol.getValue();
+            }
+
+        }
+        return min;
+    }
+}
 
 
 
